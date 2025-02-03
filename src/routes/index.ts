@@ -3,8 +3,9 @@ import testController from "../controllers/test.controller";
 
 const router = Router();
 
-router.get("/", (req: Request, res: Response) => {
-  return testController(req, res);
+router.get("/", async (req: Request, res: Response) => {
+  await testController(req, res);
+  return;
 });
 
 
