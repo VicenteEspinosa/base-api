@@ -1,8 +1,11 @@
-import express, { Request, Response } from "express";
+import express from "express";
 import routes from "./routes";
+import initializeMongo from "./db/mongo";
 
 const app = express();
 const PORT = process.env.PORT || 3000;
+
+initializeMongo();
 
 app.use(express.json());
 

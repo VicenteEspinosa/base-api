@@ -13,6 +13,7 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@types/bluebird": "^3.5.42",
     "@types/express": "^5.0.0",
     "@types/node": "^22.13.0",
     "nodemon": "^3.1.9",
@@ -20,7 +21,9 @@
     "typescript": "^5.7.3"
   },
   "dependencies": {
+    "bluebird": "^3.7.2",
     "express": "^4.21.2",
-    "lodash": "^4.17.21"
+    "lodash": "^4.17.21",
+    "mongoose": "^8.9.6"
   }
 }
