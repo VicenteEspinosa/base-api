@@ -7,7 +7,7 @@ interface Query {
 }
 
 interface ListServiceResponse {
-  page: any;
+  items: any;
 }
 
 async function list(req: Request, res: Response): Promise<Response> {
@@ -15,10 +15,9 @@ async function list(req: Request, res: Response): Promise<Response> {
   try {
     const { limit } = query;
 
-    console.log('limit', limit);
-    const { page }: ListServiceResponse = await listService({ limit });
+    const { items }: ListServiceResponse = await listService({ limit });
 
-    return res.status(200).json(page);
+    return res.status(200).json(items);
   } catch (error) {
     return res.status(500).json({ error: (error as Error).message });
   }
